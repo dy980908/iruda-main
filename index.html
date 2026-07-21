@@ -1,44 +1,246 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRUDA CLINIC | 이루다한의원</title>
-    
-fetch("header.html")
 
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/home.css">
-    <script src="/js/header.js" defer></script>
-    <script src="/js/video.js?v=2" defer></script>
+    <link rel="stylesheet" href="/js/header.js">
+    <link rel="stylesheet" href="/js/video.js">
 
-    <!-- 기본 -->
-    <link rel="icon" href="/public/favicon.ico">
-    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" sizes="16x16">
+    <!-- <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/public/favicon.ico" type="image/x-icon" sizes="16x16> -->
+
 </head>
-<body class="page-home">
-    <div id="header"></div>
 
-    <script>
-    fetch("/header.html")
-    .then(r => r.text())
-    .then(html => {
-        document.getElementById("header").innerHTML = html;
-    });
-    </script>
+<body class="page-home">
+<div id="header"></div>
+    <header>
+        <div class="header">
+            <div class="header_left">
+                <div class="logo_wrap">
+                    <a href="/index3.html">
+                        <div class="logo_deco"></div>
+                        <div class="logo"></div>
+                    </a>
+                </div>
+            </div>
+            <!-- pc -->
+            <div class="header_right">
+                <nav class="header_nav">
+                    <ul>
+                        <li class="menu">
+                            <span class="sparkle"></span>
+                            <a class="menu01 menu-tattoo">문신제거&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu">
+                            <a class="menu01_wrap">피부 미용</a>
+
+                            <div class="sub-menu-group">
+                                <a class="sub-menu menu-pigmen">흑자제거</a>
+                                <a class="sub-menu menu-flat">편평사마귀</a>
+                                <a class="sub-menu menu-smp">두피 문신</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu">
+                            <a class="menu02_wrap">한의 진료</a>
+
+                            <div class="sub-menu-group">
+                                <a class="sub-menu menu-moxi">쑥뜸</a>
+                                <a class="sub-menu menu-diet">다이어트</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="menu">
+                            <a class="menu03_wrap">이루다 소개</a>
+
+                            <div class="sub-menu-group">
+                                <a class="sub-menu menu-brandstory">브랜드스토리</a>
+                                <a class="sub-menu menu-schedule">진료일정</a>
+                                <a class="sub-menu menu-place">오시는 길</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- mo -->
+            <div class="mobile_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header_right_mobile">
+                <nav class="header_nav_mobile menu_page active" id="page1">
+                    <ul class="mobile_menu_group">
+                        <li class="menu menu-tattoo">
+                            <a class="sub-menu menu_link">
+                                <span class="menu-name">문신제거</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on.png" alt="menu01">
+                                </p>
+                            </a>
+                        </li>
+                        <li class="menu menu-pigmen menu-flat menu-smp">
+                            <a class="menu_link sub-menu" data-target="page_skin">
+                                <span class="menu-name">피부 미용</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-2.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-2.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu menu-moxi menu-diet">
+                            <a class="menu_link sub-menu" data-target="page_han">
+                                <span class="menu-name">한의 진료</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-3.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-3.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu menu-brandstory menu-schedule menu-place">
+                            <a class="menu_link sub-menu" data-target="page_about">
+                                <span class="menu-name">이루다 소개</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-4.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-4.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <ul class="mobile_menu_subgroup" id="page_treat">
+                    <li class="menu_back">← 뒤로가기</li>
+                    <li class="menu-tatto">
+                        <a href="/pages/tattoo_removal.html" class="sub-menu">문신제거</a>
+                    </li>
+                </ul> -->
+
+                    <ul class="mobile_menu_subgroup" id="page_skin">
+                        <li class="menu_back">← 뒤로가기</li>
+
+                        <li class="menu-pigmen">
+                            <a class="sub-menu menu-pigmen">
+                                <span class="menu-name">흑자제거</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-21.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-21.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu-flat menu_line">
+                            <a class="sub-menu menu-flat">
+                                <span class="menu-name">편평사마귀</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-22.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-22.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu-smp">
+                            <a class="sub-menu menu-smp">
+                                <span class="menu-name">두피 문신</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-23.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-23.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="mobile_menu_subgroup" id="page_han">
+                        <li class="menu_back">← 뒤로가기</li>
+
+                        <li class="menu-moxi">
+                            <a class="sub-menu menu-moxi">
+                                <span class="menu-name">쑥뜸</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-3.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-3.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu-diet">
+                            <a class="sub-menu menu-diet">
+                                <span class="menu-name">다이어트</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-32.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-32.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li></li>
+                    </ul>
+
+                    <ul class="mobile_menu_subgroup" id="page_about">
+                        <li class="menu_back">← 뒤로가기</li>
+
+                        <li class="menu-brandstory">
+                            <a class="sub-menu menu-brandstory">
+                                <span class="menu-name">브랜드스토리</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-4.png" alt="menu01"></p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-4.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu-schedule">
+                            <a class="sub-menu menu-schedule">
+                                <span class="menu-name">진료일정</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-42.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-42.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                        <li class="menu-place">
+                            <a class="sub-menu menu-place">
+                                <span class="menu-name">오시는 길</span>
+                                <p class="mo-menu-img"><img src="/public/image/main/mo-menu-img-43.png" alt="menu01">
+                                </p>
+                                <p class="mo-menu-img-on"><img src="/public/image/main/mo-menu-img-on-43.png"
+                                        alt="menu01"></p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="brush-line"></div>
+    </header>
+
+    <!-- quick_menu -->
+    <aside class="aside_quick">
+        <ul class="quick_group">
+            <li>
+                <a class="quick_box">
+                    <i class="quick_btn qui-btn-1"></i>
+                    <p>오시는 길</p>
+                </a>
+            </li>
+            <li>
+                <a class="quick_box">
+                    <i class="quick_btn qui-btn-2"></i>
+                    <p>카톡 문의</p>
+                </a>
+            </li>
+            <li>
+                <a class="quick_box">
+                    <i class="quick_btn qui-btn-3"></i>
+                    <p>인스타그램</p>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- quick_menu e -->
+
 
     <section class="section01">
-        <video
-            id="bgVideo"
-            class="bg-video"
-            muted
-            playsinline
-            webkit-playsinline
-            preload="auto"
-        ></video>
+        <video id="bgVideo" class="bg-video" muted playsinline webkit-playsinline preload="auto"></video>
     </section>
 
-    
     <section class="section02">
         <div class="menu-paper mask-top">
             <p></p>
@@ -99,14 +301,93 @@ fetch("header.html")
         </div>
     </section>
 
-<div id="footer"></div>
+    <div id="footer"></div>
 
-    <script>
-    fetch("/footer.html")
-    .then(r => r.text())
-    .then(html => {
-        document.getElementById("footer").innerHTML = html;
-    });
-    </script>
+
+    <footer>
+        <div class="footer" data-nosnippet>
+            <div class="menu-paper-foo mask-top-foo"></div>
+            <div class="foo-content">
+                <div class="foo-logo-group">
+                    <div class="logo_foo"></div>
+                </div>
+                <div class="foo-info">
+                    <div class="foo-info-box">
+                        <p>진료시간</p>
+                        <ul>
+                            <li>
+                                <span>월. 화. 수. 목. 금. 토</span>
+                                <span>09:00 - 18:00</span>
+                            </li>
+                            <li>
+                                <span>점심시간</span>
+                                <span>13:00 - 14:00</span>
+                            </li>
+                            <li>
+                                <span>접수마감</span>
+                                <span>17:00</span>
+                            </li>
+                            <li>
+                                <span>일요일 및 공휴일 휴무</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foo-info-box">
+                        <p class="quick_group">
+                            <a>
+                                <i class="quick_btn qui-btn-5"></i>
+                            </a>
+                            <a class="quick_box">
+                                <i class="quick_btn qui-btn-4"></i>
+                            </a>
+                            <a class="quick_box">
+                                <i class="quick_btn qui-btn-2"></i>
+                            </a>
+                            <a class="quick_box">
+                                <i class="quick_btn qui-btn-3"></i>
+                            </a>
+                        </p>
+                        <ul class="grid-footer">
+                            <li>
+                                <span>상호</span>
+                                <span>이루다 한의원</span>
+                            </li>
+                            <li>
+                                <span>사업자등록번호</span>
+                                <span>010-77-77777</span>
+                            </li>
+                            <li>
+                                <span>대표</span>
+                                <span>이**</span>
+                            </li>
+                            <li>
+                                <span>메일</span>
+                                <span>iruda@email</span>
+                            </li>
+
+                            <li>
+                                <span>연락처</span>
+                                <span>010.1111.2222</span>
+                            </li>
+                            <li>
+                                <span>주소</span>
+                                <span>부산 부산진구 00로 11번길 11, 00빌딩</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- foo-info e -->
+            </div>
+            <!-- foo-content e -->
+            <ul class="copy_ul">
+                <li class="copyright_foo">ⓒ Iruda. All Rights Reserved.</li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    
 </body>
+
 </html>
