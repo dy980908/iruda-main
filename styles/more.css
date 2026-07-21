@@ -1,0 +1,154 @@
+/* with treatment */
+.treatment_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top,#ECE8E0),
+    url(../public/image/theme/more_bg.png) no-repeat center;
+    background-blend-mode: multiply;
+    height: 800px;
+    margin-top: 160px;
+    background-size: cover, 800px;
+    background-position: center 10%;
+}
+
+.treatment_more ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/* 추천시술-이미지 */
+.pigmen-img {
+    background-color: var(--main-black);
+    background:url(../public/image/pigmentation/with01.jpg) no-repeat center;
+}
+.flat-img {
+    background-color: var(--main-black);
+    background:url(../public/image/flat_warts/with01.jpg) no-repeat center;
+}
+.smp-img {
+    background-color: var(--main-black);
+    background:url(../public/image/smp/with01.jpg) no-repeat center;
+}
+.moxi-img01 {
+    background-color: var(--main-black);
+    background:url(../public/image/moxibustion/with01.jpg) no-repeat center;
+}
+.moxi-img02 {
+    background-color: var(--main-black);
+    background:url(../public/image/moxibustion/with02.jpg) no-repeat center;
+}
+.diet-img {
+    background-color: var(--main-black);
+    background:url(../public/image/diet/with01.jpg) no-repeat center;
+}
+/* 추천시술-이미지 */
+.more_box a {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 440px;
+    position: relative;
+    cursor: default;
+}
+.more_box a p {
+    color: var(--main-cream);
+}
+.more_box a p:nth-child(1) {
+    font-size: 32px;
+    color: var(--main-cream);
+    font-weight: 500;
+}
+.more_box a p:nth-child(2) {
+    font-size: 20px;
+    color: var(--main-cream);
+    font-weight: 300;
+}
+.arrow_btn {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    transform: rotate(-136deg);
+}
+
+@media screen and (max-width: 768px) {
+    .more_box a p:nth-child(1) {
+        font-size: 20px;
+        color: var(--main-cream);
+        font-weight: 500;
+    }
+    .more_box a p:nth-child(2) {
+        font-size: 14px;
+        color: var(--main-cream);
+        font-weight: 300;
+    }
+    .treatment_more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, #ECE8E0), url(../public/image/theme/more_bg.png) no-repeat center;
+        background-blend-mode: multiply;
+        height: 500px;
+        margin-top: 160px;
+        background-size: cover, 600px;
+        background-position: center 10%;
+    }
+    .more_box a {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 260px;
+        height: 400px;
+        position: relative;
+        cursor: default;
+    }
+}
+@media screen and (max-width: 700px) {
+    .treatment_more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, #ECE8E0), url(../public/image/theme/more_bg.png) no-repeat center;
+        background-blend-mode: multiply;
+        height: 500px;
+        margin-top: 160px;
+        background-size: cover, 600px;
+        background-position: center 10%;
+    }
+    .treatment_more ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .more_box a {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 400px;
+        height: 120px;
+        position: relative;
+        cursor: default;
+    }
+    .more_box {
+        background-size: cover;
+    }
+    .moxi-img02 {
+        background: linear-gradient(rgba(0, 0, 0, 0.2)) 
+        ,url(../public/image/moxibustion/with02.jpg) no-repeat center;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 450px) {
+    .treatment_more ul {
+        margin: 0 20px;
+        width: 100%;
+    }
+    .more_box a {
+        width: 100%;
+        height: 120px;
+    }
+}

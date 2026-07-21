@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.side-nav-list {
+  position: relative;
+}
+
+.side-nav {
+  z-index: 9999;
+  display: block;
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-item {
+  position: relative;
+  padding: 15px;
+}
+
+
+.side-nav {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.side-nav.show {
+  opacity: 1;
+  pointer-events: auto;
+  scale: 0.9;
+}
+
+/* 점선 라인 */
+
+.side-nav-list::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 50%;      
+  height: calc(100% - 70px);
+  transform: translateY(-50%);
+
+  border-left: 1px dashed #161716;
+}
+
+
+/* 동그라미 */
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #161716;
+  border-radius: 50%;
+}
+
+.nav-item.active::before {
+  width: 12px;
+  height: 12px;
+}
+
+
+/* 메뉴 리스트 */
+.side-nav-list {
+  list-style: none;
+  margin: -20px 0;
+}
+
+.side-nav-list .nav-item {
+  margin-bottom: 20px;
+}
+
+.side-nav-list a {
+  position: relative;
+  text-decoration: none;
+  color: #161716;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+/* on상태 */
+
+.nav-item.active{
+  margin-top: 5px;
+  padding-right: 25px;
+}
+
+.nav-item.active::before {
+  width: 25px;
+  height: 25px;
+  background-image: url(../public/image/main/nav-point2.png);
+  background-repeat: no-repeat;
+  background-color: #3C4A33;
+  background-position: top -10px;
+  left: 19px;
+}
+
+.nav-item.active a {
+  color: #ECE8E0;
+}
+
+
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;  
+  background: url(../public/image/main/nav-point.png) no-repeat center / cover;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  z-index: -1;
+}
+
+.nav-item.active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+@media (max-width: 1400px) {
+  .side-nav-list .nav-item {
+    margin-bottom: 20px;
+  }
+  .side-nav {
+    left: 10px;
+  }
+}
+@media (max-width: 1400px) {
+  .side-nav {
+    display: none;
+  }
+}
