@@ -8,17 +8,27 @@
 
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/home.css">
-        <script src="./js/header.js" defer></script>
+    <script src="./js/header.js" defer></script>
     <script src="./js/video.js?v=2" defer></script>
 
     <!-- 기본 -->
     <link rel="icon" href="./public/favicon.ico">
     <link rel="icon" href="./public/favicon.ico" type="image/x-icon" sizes="16x16">
-    
+
 </head>
 
 <body class="page-home">
-<div id="header"></div>
+    <div id="header"></div>
+
+        <script>
+    fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+    });
+    </script>
+
+
     <header>
         <div class="header">
             <div class="header_left">
@@ -85,14 +95,16 @@
                             <a class="sub-menu menu_link">
                                 <span class="menu-name">문신제거</span>
                                 <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img.png" alt="menu01"></p>
-                                <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on.png" alt="menu01">
+                                <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on.png"
+                                        alt="menu01">
                                 </p>
                             </a>
                         </li>
                         <li class="menu menu-pigmen menu-flat menu-smp">
                             <a class="menu_link sub-menu" data-target="page_skin">
                                 <span class="menu-name">피부 미용</span>
-                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-2.png" alt="menu01"></p>
+                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-2.png" alt="menu01">
+                                </p>
                                 <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on-2.png"
                                         alt="menu01"></p>
                             </a>
@@ -100,7 +112,8 @@
                         <li class="menu menu-moxi menu-diet">
                             <a class="menu_link sub-menu" data-target="page_han">
                                 <span class="menu-name">한의 진료</span>
-                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-3.png" alt="menu01"></p>
+                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-3.png" alt="menu01">
+                                </p>
                                 <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on-3.png"
                                         alt="menu01"></p>
                             </a>
@@ -108,7 +121,8 @@
                         <li class="menu menu-brandstory menu-schedule menu-place">
                             <a class="menu_link sub-menu" data-target="page_about">
                                 <span class="menu-name">이루다 소개</span>
-                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-4.png" alt="menu01"></p>
+                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-4.png" alt="menu01">
+                                </p>
                                 <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on-4.png"
                                         alt="menu01"></p>
                             </a>
@@ -159,7 +173,8 @@
                         <li class="menu-moxi">
                             <a class="sub-menu menu-moxi">
                                 <span class="menu-name">쑥뜸</span>
-                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-3.png" alt="menu01"></p>
+                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-3.png" alt="menu01">
+                                </p>
                                 <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on-3.png"
                                         alt="menu01"></p>
                             </a>
@@ -182,7 +197,8 @@
                         <li class="menu-brandstory">
                             <a class="sub-menu menu-brandstory">
                                 <span class="menu-name">브랜드스토리</span>
-                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-4.png" alt="menu01"></p>
+                                <p class="mo-menu-img"><img src="./public/image/main/mo-menu-img-4.png" alt="menu01">
+                                </p>
                                 <p class="mo-menu-img-on"><img src="./public/image/main/mo-menu-img-on-4.png"
                                         alt="menu01"></p>
                             </a>
@@ -388,7 +404,7 @@
 
 
 
-    
+
 </body>
 
 </html>
