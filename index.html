@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>IRUDA CLINIC | 이루다한의원</title>
+    
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <script src="./js/header.js" defer></script>
+    <script src="./js/video.js?v=2" defer></script>
+
+    <!-- 기본 -->
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" sizes="16x16">
+</head>
+<body class="page-home">
+    <div id="header"></div>
+
+    <script>
+    fetch("./header.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header").innerHTML = html;
+    });
+    </script>
+
+    <section class="section01">
+        <video
+            id="bgVideo"
+            class="bg-video"
+            muted
+            playsinline
+            webkit-playsinline
+            preload="auto"
+        ></video>
+    </section>
+
+    
+    <section class="section02">
+        <div class="menu-paper mask-top">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="main-menu-group">
+            <div class="main-menu main-menu03 line-remove">
+                <a>
+                    <p class="main-menu-title">문신제거</p>
+                    <p class="main-menu-title-en">Laser Tattoo Removal</p>
+                    <p class="menu-img"><img src="./public/image/main/menu01.png" alt="menu01"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu01_on.png" alt="menu01"></p>
+                </a>
+            </div>
+            <div class="main-menu main-menu02 line-remove">
+                <a>
+                    <p class="main-menu-title">피부미용</p>
+                    <p class="main-menu-title-en">Aesthetic Dermatology</p>
+                    <p class="menu-img"><img src="./public/image/main/menu02.png" alt="menu02"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu02_on.png" alt="menu02"></p>
+                </a>
+            </div>
+            <div class="main-menu main-menu03 line-remove">
+                <a>
+                    <p class="main-menu-title">한의진료</p>
+                    <p class="main-menu-title-en">Korean Medicine Treatment</p>
+                    <p class="menu-img"><img src="./public/image/main/menu03.png" alt="menu03"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu03_on.png" alt="menu03"></p>
+                </a>
+            </div>
+        </div>
+        <div class="main-menu-group">
+            <div class="main-menu02 menu-img-bottom">
+                <a>
+                    <p class="main-menu-title">진료일정</p>
+                    <p class="main-menu-title-en">Schedule</p>
+                    <p class="menu-img"><img src="./public/image/main/menu04.png" alt="menu04"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu04_on.png" alt="menu04"></p>
+                </a>
+            </div>
+            <div class="main-menu03 menu-img-bottom">
+                <a>
+                    <p class="main-menu-title">예약문의</p>
+                    <p class="main-menu-title-en">Contact</p>
+                    <p class="menu-img"><img src="./public/image/main/menu05.png" alt="menu05"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu05_on.png" alt="menu05"></p>
+                </a>
+            </div>
+            <div class="main-menu02 menu-img-bottom">
+                <a>
+                    <p class="main-menu-title">오시는 길</p>
+                    <p class="main-menu-title-en">Location</p>
+                    <p class="menu-img"><img src="./public/image/main/menu06.png" alt="menu06"></p>
+                    <p class="menu-img-on"><img src="./public/image/main/menu06_on.png" alt="menu06"></p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<div id="footer"></div>
+
+    <script>
+    fetch("/footer.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("footer").innerHTML = html;
+    });
+    </script>
+</body>
+</html>
