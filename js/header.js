@@ -1,6 +1,7 @@
 const ROOT = "";
 
-fetch(ROOT + "/header.html")
+// fetch(ROOT + "/header.html")
+fetch(ROOT + "header.html")
 .then(r => r.text())
 .then(html => {
     document.getElementById("header").innerHTML = html;

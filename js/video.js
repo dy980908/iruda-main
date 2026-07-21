@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     video.removeAttribute("controls");
 
     // ===== 2. 소스 주입 =====
-    video.src = "/public/image/main/hero_media.mp4";
+    video.src = "public/image/main/hero_media.mp4";
 
 
     // ===== 3. fallback 함수 =====
     const fallback = () => {
         video.style.display = "none";
         section.style.background =
-            "url('/public/image/main/hero_fallback.jpg') center/cover no-repeat";
+            "url('public/image/main/hero_fallback.jpg') center/cover no-repeat";
     };
 
 
